@@ -19,7 +19,7 @@ class AuthForm extends StatelessWidget {
               labelColor: theme.appBarTheme.foregroundColor,
               tabs: [
                 Tab(text: 'Login'),
-                Tab(text: 'Registration'),
+                Tab(text: 'Sign in'),
               ],
             ),
           ),

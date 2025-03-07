@@ -37,14 +37,23 @@ class _AnimatedButtonState extends State<AnimatedButton> with SingleTickerProvid
 
   @override
   Widget build(BuildContext context) {
-    final theme =Theme.of(context);
+    final theme = Theme.of(context);
     return FadeTransition(
       opacity: _animation,
       child: Padding(
         padding: const EdgeInsets.only(top: 20),
         child: ElevatedButton(
           onPressed: widget.onPressed,
-          child: Text('Let \'s go shopping',style: TextStyle(color: theme.textTheme.labelLarge?.color),),
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          ),
+          child: Text(
+            'Let\'s go shopping',
+            style: TextStyle(color: theme.appBarTheme.foregroundColor),
+          ),
         ),
       ),
     );
